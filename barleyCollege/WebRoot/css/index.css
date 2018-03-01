@@ -1,0 +1,55 @@
+*{
+	font-family:"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;
+}
+body{
+	background-color: #edeff0;
+}
+.modal-dialog.modal-sm {
+    padding-top: 30px;
+}
+.no-border-r{
+	border-radius: 0px;
+}
+.no-margin-b{
+	margin-bottom: 0px;
+}
+.white{
+	color:#fff;
+}
+.top-50{
+	position:absolute;
+	top:50%;
+}
+.footer{
+	width: 100%;
+	background-color: #000;
+	color:#fff;
+	font-size: 16px;
+	text-align: center;
+	height:40px;
+	line-height: 40px;
+	margin-top: 10px;
+}
+.title{
+	font-size: 20px;
+	color:#07111b;
+	font-weight: 200;
+	padding:10px;
+}
+.circle{
+	border-radius: 50%;
+}
+.index-username{
+	text-align: center;
+}
+.index-userinfo{
+	text-align: center;
+	font-size: 12px;
+	color:#93999f;
+}
+.index_input{
+	padding:10px 0px;
+}
+.float-right{
+	float: right;
+}

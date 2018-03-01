@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>课程</title>
+	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link rel="stylesheet" href="css/course.css">
+</head>
+<body>
+	
+	
+
+	<div class="toper">
+	</div>
+		
+
+	<script >
+		$(document).ready(function() {
+		    bodyContent = $.ajax({
+		        url: "top.html",
+		        global: false,
+		        type: "POST",
+		        dataType: "html",
+		        async: false,
+		        success: function(msg) {
+		            $(".toper").append(msg);
+		        }
+		    })
+		});
+	</script>
+
+
+
+
+	<!--主模块-->
+	<div class="container course-select-container">
+		<!-- 分类 -->
+		<div class="course-select">
+			<div class="course-type">
+				<ul class="course-ul">
+					<li class="course-li course-li-title">方向：</li>
+					<li class="course-li course-li-active">全部</li>
+					<li class="course-li">计算机</li>
+					<li class="course-li">土木</li>
+					<li class="course-li">法学</li>
+					<li class="course-li">外语</li>
+					<li class="course-li">化工</li>
+					<li class="course-li">物理</li>
+				</ul>
+			</div>
+			<hr>
+			<div class="course-type">
+				<ul class="course-ul">
+					<li class="course-li course-li-title">类型：</li>
+					<li class="course-li course-li-active">全部</li>
+					<li class="course-li">基础</li>
+					<li class="course-li">中级</li>
+					<li class="course-li">高级</li>
+				</ul>
+			</div>
+			<hr>
+		<!-- 分类 -->
+
+		<!-- 内容 -->
+		</div>
+		<div class="sort">
+			<button class="sort-b sort-b-active">热度</button>
+			<button class="sort-b">新度</button>
+		</div>
+		<div class="row">
+			<div class="col-md-3">
+				<div class="panel panel-danger">
+	  				<div class="panel-heading">Panel heading without title</div>
+	  				<div class="panel-body">
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	  				</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="panel panel-danger">
+	  				<div class="panel-heading">Panel heading without title</div>
+	  				<div class="panel-body">
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	  				</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="panel panel-danger">
+	  				<div class="panel-heading">Panel heading without title</div>
+	  				<div class="panel-body">
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	  				</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="panel panel-danger">
+	  				<div class="panel-heading">Panel heading without title</div>
+	  				<div class="panel-body">
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	  				</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3">
+				<div class="panel panel-primary">
+	  				<div class="panel-heading">Panel heading without title</div>
+	  				<div class="panel-body">
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	  				</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="panel panel-primary">
+	  				<div class="panel-heading">Panel heading without title</div>
+	  				<div class="panel-body">
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	  				</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="panel panel-primary">
+	  				<div class="panel-heading">Panel heading without title</div>
+	  				<div class="panel-body">
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	  				</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="panel panel-primary">
+	  				<div class="panel-heading">Panel heading without title</div>
+	  				<div class="panel-body">
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	  				</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3">
+				<div class="panel panel-info">
+	  				<div class="panel-heading">Panel heading without title</div>
+	  				<div class="panel-body">
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	  				</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="panel panel-info">
+	  				<div class="panel-heading">Panel heading without title</div>
+	  				<div class="panel-body">
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	  				</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="panel panel-info">
+	  				<div class="panel-heading">Panel heading without title</div>
+	  				<div class="panel-body">
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	  				</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="panel panel-info">
+	  				<div class="panel-heading">Panel heading without title</div>
+	  				<div class="panel-body">
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	  				</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3">
+				<div class="panel panel-warning">
+	  				<div class="panel-heading">Panel heading without title</div>
+	  				<div class="panel-body">
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	  				</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="panel panel-warning">
+	  				<div class="panel-heading">Panel heading without title</div>
+	  				<div class="panel-body">
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	  				</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="panel panel-warning">
+	  				<div class="panel-heading">Panel heading without title</div>
+	  				<div class="panel-body">
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	  				</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="panel panel-warning">
+	  				<div class="panel-heading">Panel heading without title</div>
+	  				<div class="panel-body">
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	    				Panel content
+	  				</div>
+				</div>
+			</div>
+		</div>
+		<!-- 内容 -->
+	</div>
+	<!--主模块-->
+	
+
+	
+	<div class="footer">
+	</div>
+
+
+	<script >
+		$(document).ready(function() {
+		    bodyContent = $.ajax({
+		        url: "foot.html",
+		        global: false,
+		        type: "POST",
+		        dataType: "html",
+		        async: false,
+		        success: function(msg) {
+		            $(".footer").append(msg);
+		        }
+		    })
+		});
+	</script>
+</body>
+</html>

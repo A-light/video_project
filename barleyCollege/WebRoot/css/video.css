@@ -1,0 +1,26 @@
+*{
+	font-family:"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;
+}
+body{
+	background-color: #edeff0;
+}
+.footer{
+	width: 100%;
+	background-color: #000;
+	color:#fff;
+	font-size: 16px;
+	text-align: center;
+	height:40px;
+	line-height: 40px;
+}
+.top{
+	margin: 80px auto;
+}
+.content{
+	/*margin: 0 auto;*/
+	border:1px solid #000;
+	text-align: center;
+}
+.video-player{
+	margin-top:51px;
+}

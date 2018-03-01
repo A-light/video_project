@@ -1,0 +1,64 @@
+*{
+	font-family:"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;
+}
+body{
+	background-color: #edeff0;
+}
+.footer{
+	width: 100%;
+	background-color: #000;
+	color:#fff;
+	font-size: 16px;
+	text-align: center;
+	height:40px;
+	line-height: 40px;
+}
+.modal-dialog.modal-sm {
+    padding-top: 30px;
+}
+.signIn-container{
+	margin-top: 51px;
+	padding:80px 0px;
+}
+.signIn-panel{
+	overflow: hidden;
+	border: 1px solid #ccc;
+}
+.signIn-panel img{
+	/*float:left;*/
+}
+.signIn-panel form{
+	/*float:left;*/
+	padding: 20px 0px;
+}
+.no-padding{
+	padding:0px;
+}
+.signInBg{
+	background-image:url(../images/signInBg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: hidden;
+	margin-bottom: 0px;
+}
+.signIn-form-div{
+	margin-top:100px;
+	margin-bottom:100px;
+	box-shadow: 0 4px 8px 0 rgba(7,17,27,.1);
+	background-color: #fff;
+	padding: 0px;
+	border-radius: 4px;
+}
+.signIn-form{
+	padding:40px 15px;
+}
+.signInTitle{
+	font-size: 18px;
+	background-image: url(../images/signIn.jpg);
+	background-size: cover;
+	border-radius: 4px 4px 0px 0px;
+}
+.signInTitle p{
+	color:#fff;
+	padding:20px;
+}

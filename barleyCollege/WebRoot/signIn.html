@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>用户注册</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/signIn.css">
+	<link rel="stylesheet" href="css/font-awesome.css">
+</head>
+<body>
+	
+	
+	<div class="toper">
+	</div>
+		
+
+	<script >
+		$(document).ready(function() {
+		    bodyContent = $.ajax({
+		        url: "top.html",
+		        global: false,
+		        type: "POST",
+		        dataType: "html",
+		        async: false,
+		        success: function(msg) {
+		            $(".toper").append(msg);
+		        }
+		    })
+		});
+	</script>
+
+
+
+	<!-- 注册 -->
+	<div class="jumbotron signInBg">
+		<div class="col-sm-4 col-sm-offset-4 signIn-form-div">
+			<div class="text-center signInTitle">
+				<p>用户注册</p>
+			</div>
+			<form class="signIn-form col-md-10 col-md-offset-1">
+				<div class="form-group">
+					<label for="signIn_username">用户名：</label>
+					<input type="text" class="form-control" id="signIn_username" placeholder="请输入姓名">
+				</div>
+				<div class="form-group">
+					<label for="signIn_shenfen">身份：</label>
+					<input type="text" class="form-control" id="signIn_username" placeholder="请输入姓名">
+				</div>
+				<div class="form-group">
+					<label for="signIn_email">邮箱：</label>
+					<input type="email" class="form-control" id="signIn_email" placeholder="请输入邮箱">
+				</div>
+				<div class="form-group">
+					<label for="signIn_password">密码：</label>
+					<input type="password" class="form-control" id="signIn_password" placeholder="请输入密码">
+				</div>
+				<div class="form-group">
+					<label for="signIn_confirm_password">确认密码：</label>
+					<input type="password" class="form-control" id="signIn_confirm_password" placeholder="请确认密码">
+				</div>
+				<div class="checkbox">
+					<a href="" data-toggle="modal" data-target=".bs-example-modal-sm">有账号了？直接登录</a>
+				</div>
+				<button type="submit" class="btn btn-primary btn-block">确认</button>
+			</form>
+		</div>
+	</div>
+	<!-- 注册 -->
+	
+	
+
+
+	<div class="footer">
+	</div>
+
+
+	<script >
+		$(document).ready(function() {
+		    bodyContent = $.ajax({
+		        url: "foot.html",
+		        global: false,
+		        type: "POST",
+		        dataType: "html",
+		        async: false,
+		        success: function(msg) {
+		            $(".footer").append(msg);
+		        }
+		    })
+		});
+	</script>
+
+
+
+
+</body>
+</html>

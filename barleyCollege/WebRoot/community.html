@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" href="css/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="css/conmunity.css"/>
+		<title></title>
+	</head>
+
+	<body>
+		
+			
+		<div class="toper">
+		</div>
+			
+
+		<script >
+			$(document).ready(function() {
+			    bodyContent = $.ajax({
+			        url: "top.html",
+			        global: false,
+			        type: "POST",
+			        dataType: "html",
+			        async: false,
+			        success: function(msg) {
+			            $(".toper").append(msg);
+			        }
+			    })
+			});
+		</script>
+
+
+
+
+		<div class="container" style="margin-top:60px">
+			<div class="col-sm-8 " >
+				<textarea name="info" rows="1" cols="1" style="height: 100px;width: 100%;overflow: hidden;resize: none;"></textarea>
+			</div>
+			<div class="col-sm-4 ">栏目</div>
+		</div>
+		
+
+
+		<div class="footer">
+		</div>
+
+
+		<script >
+			$(document).ready(function() {
+			    bodyContent = $.ajax({
+			        url: "foot.html",
+			        global: false,
+			        type: "POST",
+			        dataType: "html",
+			        async: false,
+			        success: function(msg) {
+			            $(".footer").append(msg);
+			        }
+			    })
+			});
+		</script>
+
+
+	</body>
+
+</html>

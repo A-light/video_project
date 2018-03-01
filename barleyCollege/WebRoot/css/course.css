@@ -1,0 +1,73 @@
+*{
+	font-family:"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;
+}
+body{
+	background-color: #edeff0;
+}
+hr{
+	border-color: #fff;
+}
+.footer{
+	width: 100%;
+	background-color: #000;
+	color:#fff;
+	font-size: 16px;
+	text-align: center;
+	height:40px;
+	line-height: 40px;
+}
+.course-select-container{
+	margin-top:51px;
+}
+.course-select{
+	margin-top: 20px;
+}
+.course-ul{
+	list-style: none;
+}
+.course-li{
+	float:left;
+	padding:10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.course-li:hover{
+	color:#f01414;
+}
+.course-li-title{
+	font-size: 16px;
+	font-weight: 700;
+	cursor: default;
+}
+.course-li-title:hover{
+	color:#000;
+}
+.course-li-active{
+	background-color: #2b333b;
+	color:#fff;
+}
+.course-li-active:hover{
+	color:#fff;
+}
+.course-type{
+	overflow: hidden;
+}
+.course-ul{
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+}
+.sort-b{
+	background: rgba(0,0,0,0);
+	border: none;
+	padding: 15px 10px;
+}
+.sort-b-active{
+	color: #f01414;
+}
+.title{
+	font-size: 20px;
+	color:#07111b;
+	font-weight: 200;
+	padding:10px;
+}

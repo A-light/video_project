@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ckplayer6.8</title>
+<style type="text/css">
+body, td, th {
+	font-size: 14px;
+	line-height: 26px;
+}
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+
+p {
+	margin-top: 5px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding-left: 10px;
+}
+
+#a1 {
+	position: relative;
+	z-index: 100;
+	width: 600px;
+	height: 400px;
+	float: left;
+}
+</style>
+</head>
+
+<body>
+	<div id="a1"></div>
+	<textarea name="statusvalue" rows="15" id="statusvalue">
+	</textarea>
+	<script type="text/javascript" src="ckplayer/ckplayer.js"
+	charset="utf-8"></script>
+   <script>
+		var _nn = 0;
+		function ckplayer_status(str) {
+			_nn += 1;
+			if (_nn > 100) {
+				_nn = 0;
+				document.getElementById('statusvalue').value = '';
+			}
+		   document.getElementById('statusvalue').value =
+			     str+document.getElementById('statusvalue').value;
+			//console.log(str);
+		}
+		
+	
+	</script>
+	
+
+	
+	<script type="text/javascript">
+		//如果你不需要某项设置，可以直接删除，注意var flashvars的最后一个值后面不能有逗号
+		  function loadedHandler() {
+		  		addPauseListenner();
+                addPlayListener();
+        }
+         function addTimeListener() {//增加时间监听
+           if (CKobject.getObjectById('ckplayer_a1').getType()) {//说明使用html5播放器
+                CKobject.getObjectById('ckplayer_a1').addListener('time', timeHandler);
+            }
+            else {
+                CKobject.getObjectById('ckplayer_a1').addListener('time', 'timeHandler');
+            }
+        }
+        function timeHandler(time) {
+            if (time > -1) {
+                SetCookie("Time", time);
+                console.log(time);
+            }
+        }
+	
+        function addPlayListener() {//增加播放监听
+            if (CKobject.getObjectById('ckplayer_a1').getType()) {//说明使用html5播放器
+                CKobject.getObjectById('ckplayer_a1').addListener('play', playHandler);
+            }
+            else {
+                CKobject.getObjectById('ckplayer_a1').addListener('play', 'playHandler');
+            }
+        }
+        
+	  function playHandler() {
+            //alert('因为注册了监听播放，所以弹出此内容，删除监听将不再弹出');
+         //  removePlayListener();
+            CKobject.getObjectById('ckplayer_a1').videoSeek(getCookie("Time"));
+            addTimeListener();
+        }
+      function addPauseListenner(){
+          if (CKobject.getObjectById('ckplayer_a1').getType()) {//说明使用html5播放器
+                CKobject.getObjectById('ckplayer_a1').addListener('pause', pauseHander);
+            }
+            else {
+                CKobject.getObjectById('ckplayer_a1').addListener('pause', 'pauseHander');
+            }
+       }
+        function pauseHander(){
+			alert("暂停了");
+		}
+		function VideoPlayEndedHandler(){
+			alert("结束了");
+		}
+		function removeListener() { //删除监听事件
+			if (CKobject.getObjectById('ckplayer_a1').getType()) { //说明使用html5播放器
+				CKobject.getObjectById('ckplayer_a1').removeListener('play', playHandler);
+			} else {
+				CKobject.getObjectById('ckplayer_a1').removeListener('play', 'playHandler');
+			}
+		}
+      
+        //写cookies函数
+        function SetCookie(name, value)//两个参数，一个是cookie的名子，一个是值
+        {
+            var Days = 30; //此 cookie 将被保存 30 天
+            var exp = new Date(); //new Date("December 31, 9998");
+            exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
+            document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString();
+        }
+        function getCookie(name)//取cookies函数
+        {
+            var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
+            if (arr != null) return unescape(arr[2]); return null;
+        }
+		var flashvars = {
+			f : 'http://img.ksbbs.com/asset/Mon_1605/0ec8cc80112a2d6.mp4', //视频地址
+			a : '', //调用时的参数，只有当s>0的时候有效
+			s : '0', //调用方式，0=普通方法（f=视频地址），1=网址形式,2=xml形式，3=swf形式(s>0时f=网址，配合a来完成对地址的组装)
+			c : '0', //是否读取文本配置,0不是，1是
+			x : '', //调用配置文件路径，只有在c=1时使用。默认为空调用的是ckplayer.xml
+			e : '8', //视频结束后的动作，0是调用js函数，1是循环播放，2是暂停播放并且不调用广告，3是调用视频推荐列表的插件，4是清除视频流并调用js功能和1差不多，5是暂停播放并且调用暂停广告
+			v : '30', //默认音量，0-100之间
+			lv : '0', //是否是直播流，=1则锁定进度栏
+			loaded : 'loadedHandler', //当播放器加载完成后发送该js函数loaded
+			//调用播放器的所有参数列表结束
+			//以下为自定义的播放器参数用来在插件里引用的
+			my_url : encodeURIComponent(window.location.href) //本页面地址
+		//调用自定义播放器参数结束
+		};
+		var params = {
+			bgcolor : '#FFF',
+			allowFullScreen : true,
+			allowScriptAccess : 'always'
+		}; //这里定义播放器的其它参数如背景色（跟flashvars中的b不同），是否支持全屏，是否支持交互
+		var video = [ 'http://img.ksbbs.com/asset/Mon_1605/0ec8cc80112a2d6.mp4->video/mp4' ];
+		CKobject.embed('ckplayer/ckplayer.swf', 'a1', 'ckplayer_a1', '100%', '100%', false, flashvars, video, params);
+		/*
+			以上代码演示的兼容flash和html5环境的。如果只调用flash播放器或只调用html5请看其它示例
+		*/
+		function videoLoadJs(s) {
+			alert("执行了播放");
+		}
+		function playerstop() {
+			//只有当调用视频播放器时设置e=0或4时会有效果
+			alert('播放完成');
+		}
+		var _nn = 0; //用来计算实时监听的条数的，超过100条记录就要删除，不然会消耗内存
+		function getstart() {
+			var a = CKobject.getObjectById('ckplayer_a1').getStatus();
+			var ss = '';
+			for (var k in a) {
+				ss += k + ":" + a[k] + '\n';
+			}
+			alert(ss);
+		}
+		function changePrompt() {
+			CKobject.getObjectById('ckplayer_a1').promptUnload(); //卸载掉目前的
+			CKobject.getObjectById('ckplayer_a1').changeFlashvars('{k->10|20|30}{n->重设提示点一|重设提示点二|重设提示点三}');
+			CKobject.getObjectById('ckplayer_a1').promptLoad(); //重新加载
+		}
+		function addflash() {
+			if (CKobject.Flash()['f']) {
+				CKobject._K_('a1').innerHTML = '';
+				CKobject.embedSWF('ckplayer/ckplayer.swf', 'a1', 'ckplayer_a1', '600', '400', flashvars, params);
+			} else {
+				alert('该环境中没有安装flash插件，无法切换');
+			}
+		}
+		function addhtml5() {
+			if (CKobject.isHTML5()) {
+				support = [ 'all' ];
+				CKobject._K_('a1').innerHTML = '';
+				CKobject.embedHTML5('a1', 'ckplayer_a1', 600, 400, video, flashvars, support);
+			} else {
+				alert('该环境不支持html5，无法切换');
+			}
+		}
+	
+	</script>
+	
+	<p>该页面只是一个展示播放器功能的页面，里面的代码请自行选择需要的。</p>
+	<p>
+		<input	type="button" name="button23" value="切换到flash播放器" onClick="addflash();" />
+	  <input
+			type="button" name="button24" value="切换到html5播放器"
+			onClick="addhtml5();" />
+	</p>
+	
+	<p>
+		先设置好要跳转的秒数： <input name="seconds" type="text" id="seconds" value="20"
+			size="5" maxlength="5" /> <input type="button" name="button"
+			id="button" value="跳转"
+			onClick="CKobject.getObjectById('ckplayer_a1').videoSeek(document.getElementById('seconds').value);" />
+	</p>
+	<p>以下的操作只对flash播放器使用，在html5播放时点击下面按钮不会发生任何事情，也不用担心会发生错误，因为在html5里虽然不支持但同时屏蔽了这些有可能出错的代码</p>
+	<p>
+		<input type="button" name="button3" value="隐藏控制栏"
+			onClick="CKobject.getObjectById('ckplayer_a1').changeFace(true);" />
+
+		<input type="button" name="button12" value="清除视频"
+			onClick="CKobject.getObjectById('ckplayer_a1').videoClear();" /> 
+		<input
+			type="button" name="button17" value="清除提示点"
+			onClick="CKobject.getObjectById('ckplayer_a1').promptUnload();" /> 
+		<input
+			type="button" name="button18" value="显示提示点"
+			onClick="CKobject.getObjectById('ckplayer_a1').promptLoad();" /> 
+		<input
+			type="button" name="button19" value="改变提示点" onClick="changePrompt()" />
+			
+	</p>
+
+
+	<p id="aboutme"></p>
+	<script type="text/javascript">
+		aboutme+='是否安装了flash插件：'+CKobject.Flash()['f']+'<br />';
+		if(CKobject.Flash()['f']){
+			aboutme+='flash插件版本：'+CKobject.Flash()['v']+'<br />';
+		}
+		aboutme+='是否支持HTML5：'+CKobject.isHTML5()+'<br />';
+		CKobject._K_('aboutme').innerHTML=aboutme;
+</script>
+
+</body>
+</html>

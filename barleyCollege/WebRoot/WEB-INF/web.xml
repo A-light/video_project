@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0"
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>cn.sightseeing.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>cn.sightseeing.servlet.RegisterServlet</servlet-class>
+  </servlet>
+   <servlet>
+    <servlet-name>TestServlet</servlet-name>
+    <servlet-class>cn.sightseeing.test.TestServlet</servlet-class>
+  </servlet>
+ <servlet>
+    <servlet-name>BaseServlet</servlet-name>
+    <servlet-class>cn.sightseeing.test.BaseServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UploadServlet</servlet-name>
+    <servlet-class>cn.sightseeing.servlet.UploadServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UploadVideoServlet</servlet-name>
+    <servlet-class>cn.sightseeing.servlet.UploadVideoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>UserServlet</description>
+    <display-name>UserServlet</display-name>
+    <servlet-name>UserServlet</servlet-name>
+    <servlet-class>cn.sightseeing.servlet.UserServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>ConfirmPassword</description>
+    <display-name>ConfirmPasswordServlet</display-name>
+    <servlet-name>ConfirmPasswordServlet</servlet-name>
+    <servlet-class>cn.sightseeing.servlet.ConfirmPasswordServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>CourseServlet</description>
+    <display-name>CourseServlet</display-name>
+    <servlet-name>CourseServlet</servlet-name>
+    <servlet-class>cn.sightseeing.servlet.CourseServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>LoadCourseServlet</description>
+    <display-name>LoadCourseServlet</display-name>
+    <servlet-name>LoadCourseServlet</servlet-name>
+    <servlet-class>cn.sightseeing.servlet.LoadCourseServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>VideoServlet</description>
+    <display-name>VideoServlet</display-name>
+    <servlet-name>VideoServlet</servlet-name>
+    <servlet-class>cn.sightseeing.servlet.VideoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>StudentServlet</description>
+    <display-name>StudentServlet</display-name>
+    <servlet-name>StudentServlet</servlet-name>
+    <servlet-class>cn.sightseeing.servlet.StudentServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>CollectServlet</description>
+    <display-name>CollectServlet</display-name>
+    <servlet-name>CollectServlet</servlet-name>
+    <servlet-class>cn.sightseeing.servlet.CollectServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>TeacherServlet</description>
+    <display-name>TeacherServlet</display-name>
+    <servlet-name>TeacherServlet</servlet-name>
+    <servlet-class>cn.sightseeing.servlet.TeacherServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>CourseServlet</description>
+    <display-name>CourseServlet</display-name>
+    <servlet-name>BlogServlet</servlet-name>
+    <servlet-class>cn.sightseeing.servlet.BlogServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/RegisterServlet</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+    <servlet-name>TestServlet</servlet-name>
+    <url-pattern>/TestServlet</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+    <servlet-name>BaseServlet</servlet-name>
+    <url-pattern>/BaseServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UploadServlet</servlet-name>
+    <url-pattern>/UploadServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UploadVideoServlet</servlet-name>
+    <url-pattern>/UploadVideoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UserServlet</servlet-name>
+    <url-pattern>/UserServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ConfirmPasswordServlet</servlet-name>
+    <url-pattern>/ConfirmPasswordServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CourseServlet</servlet-name>
+    <url-pattern>/CourseServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoadCourseServlet</servlet-name>
+    <url-pattern>/LoadCourseServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>VideoServlet</servlet-name>
+    <url-pattern>/VideoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>StudentServlet</servlet-name>
+    <url-pattern>/StudentServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CollectServlet</servlet-name>
+    <url-pattern>/CollectServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>TeacherServlet</servlet-name>
+    <url-pattern>/TeacherServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BlogServlet</servlet-name>
+    <url-pattern>/BlogServlet</url-pattern>
+  </servlet-mapping>
+  <filter>
+  	<filter-name>EncodingFilter</filter-name>
+  	<filter-class>cn.sightseeing.filter.EncodingFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>EncodingFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+</web-app>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>课程学习</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/video.css">
+		<link rel="stylesheet" href="css/font-awesome.css">
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.js"></script>
+	</head>
+
+	<body>
+		
+
+		
+
+		<div class="toper">
+		</div>
+			
+
+		<script >
+			$(document).ready(function() {
+			    bodyContent = $.ajax({
+			        url: "top.html",
+			        global: false,
+			        type: "POST",
+			        dataType: "html",
+			        async: false,
+			        success: function(msg) {
+			            $(".toper").append(msg);
+			        }
+			    })
+			});
+		</script>
+
+
+
+		
+		<!--视频播放模块-->
+		<div class="content video-player" id="video">
+			<!--		<video src="video/animal.mp4" width="500px" height="400px" controls="controls">视频播放区域</video>				-->
+			<div id="a1"></div>
+		
+		</div>	
+		<script type="text/javascript">
+				var flashvars = {
+					f: 'video/animal.mp4',
+					c: 0,
+					b: 1,
+					i: '/images/i.jpg'
+				};
+				var params = {
+					bgcolor: '#FFF',
+					allowFullScreen: true,
+					allowScriptAccess: 'always',
+					wmode: 'transparent'
+				};
+				CKobject.embedSWF('ckplayer/ckplayer.swf', 'a1', 
+									'ckplayer_a1', '600', '400', flashvars, params);
+				function closelights() { //关灯
+				//	alert(' 本演示不支持开关灯');
+				}
+				
+				function openlights() { //开灯
+					//alert(' 本演示不支持开关灯');
+				}
+				function ckmarqueeadv(){
+					return '广告内容'
+				}
+			
+		</script>
+		<!--视频播放模块-->
+		
+		<!--评论区-->
+		<div class="container" style="padding-top:20px;background-color: #fff;margin-bottom: 20px;">
+			<div class="col-md-9" style="border-right:1px solid #ccc">
+				<h4>评论</h4>
+				<hr>
+				<form action="">
+					<div class="media">
+					  <div class="media-left">
+					    <a href="#">
+					      <img class="media-object" src="images/index.svg" alt="...">
+					    </a>
+					  </div>
+					  <div class="media-body">
+					   	<textarea class="form-control"></textarea>
+					  </div>
+					  <input type="submit" class="btn btn-primary pull-right" style="margin-top:20px;" value="发表评论">
+					</div>
+				</form>
+				<hr>
+
+
+				<div class="media">
+				  <div class="media-left">
+				    <a href="#">
+				      <img class="media-object" src="images/index.svg" alt="...">
+				    </a>
+				  </div>
+				  <div class="media-body">
+				    <h4 class="media-heading">崔光武</h4>
+				    这个是评论的内容，这个是评论的内容，这个是评论的内容，这个是评论的内容，这个是评论的内容，这个是评论的内容，这个是评论的内容，这个是评论的内容，这个是评论的内容，这个是评论的内容，这个是评论的内容。
+					
+					<p style="color:#93999f;margin-top: 10px;"><small>时间：XXXX年XX月XX日XX时XX分XX</small></p>
+				  </div>
+				</div>
+				<hr>
+				<div class="media">
+				  <div class="media-left">
+				    <a href="#">
+				      <img class="media-object" src="images/index.svg" alt="...">
+				    </a>
+				  </div>
+				  <div class="media-body">
+				    <h4 class="media-heading">崔光武</h4>
+				    这个是评论的内容，这个是评论的内容，这个是评论的内容，这个是评论的内容，这个是评论的内容，这个是评论的内容，这个是评论的内容，这个是评论的内容，这个是评论的内容，这个是评论的内容，这个是评论的内容。
+					<p style="color:#93999f;margin-top: 10px;"><small>时间：XXXX年XX月XX日XX时XX分XX</small></p>
+				  </div>
+				</div>
+				<hr>
+				<div class="media">
+				  <div class="media-left">
+				    <a href="#">
+				      <img class="media-object" src="images/index.svg" alt="...">
+				    </a>
+				  </div>
+				  <div class="media-body">
+				    <h4 class="media-heading">崔光武</h4>
+				    这个是评论的内容，这个是评论的内容，这个是评论的内容，这个是评论的内容，这个是评论的内容，这个是评论的内容，这个是评论的内容，这个是评论的内容，这个是评论的内容，这个是评论的内容，这个是评论的内容。
+					
+					<p style="color:#93999f;margin-top: 10px;"><small>时间：XXXX年XX月XX日XX时XX分XX</small></p>
+				  </div>
+				</div>
+				<hr>
+				<div class="media">
+				  <div class="media-left">
+				    <a href="#">
+				      <img class="media-object" src="images/index.svg" alt="...">
+				    </a>
+				  </div>
+				  <div class="media-body">
+				    <h4 class="media-heading">崔光武</h4>
+				    这个是评论的内容，这个是评论的内容，这个是评论的内容，这个是评论的内容，这个是评论的内容，这个是评论的内容，这个是评论的内容，这个是评论的内容，这个是评论的内容，这个是评论的内容，这个是评论的内容。
+					
+					<p style="color:#93999f;margin-top: 10px;"><small>时间：XXXX年XX月XX日XX时XX分XX</small></p>
+				  </div>
+				</div>
+				<hr>
+				<div class="media">
+				  <div class="media-left">
+				    <a href="#">
+				      <img class="media-object" src="images/index.svg" alt="...">
+				    </a>
+				  </div>
+				  <div class="media-body">
+				    <h4 class="media-heading">崔光武</h4>
+				    这个是评论的内容，这个是评论的内容，这个是评论的内容，这个是评论的内容，这个是评论的内容，这个是评论的内容，这个是评论的内容，这个是评论的内容，这个是评论的内容，这个是评论的内容，这个是评论的内容。
+					
+					<p style="color:#93999f;margin-top: 10px;"><small>时间：XXXX年XX月XX日XX时XX分XX</small></p>
+				  </div>
+				</div>
+				<hr>
+
+
+			</div>
+			<div class="col-md-3">
+				<h4>作业</h4>
+				<hr>
+				<ul style="list-style: none;text-align: center;margin:0px;padding: 0px;">
+					<li><a href="#">本课程资源</a></li>
+					<hr>
+					<li><a href="#">本课程作业</a></li>
+				</ul>
+
+				<h4 style="margin-top: 20px;">课程操作</h4>
+				<hr>
+				<ul style="list-style: none;text-align: center;margin:0px;padding: 0px;">
+					<li><a href="#"><i class="fa-star-o fa">123</i> 收藏本课程</a></li>
+					<hr>
+					<li><a href="#"><i class="fa fa-thumbs-o-up">123</i> 推荐此课程</a></li>
+				</ul>
+				<h4 style="margin-top: 20px;">课程简介</h4>
+				<hr>
+				<span>这里是课程简介，这里是课程简介，这里是课程简介，这里是课程简介，这里是课程简介，这里是课程简介，这里是课程简介，这里是课程简介，这里是课程简介，这里是课程简介，这里是课程简介，这里是课程简介。</span>
+			</div>
+		</div>
+		<!--评论区-->
+	
+		<div class="footer">
+		</div>
+
+
+		<script >
+			$(document).ready(function() {
+			    bodyContent = $.ajax({
+			        url: "foot.html",
+			        global: false,
+			        type: "POST",
+			        dataType: "html",
+			        async: false,
+			        success: function(msg) {
+			            $(".footer").append(msg);
+			        }
+			    })
+			});
+		</script>
+
+
+
+
+	</body>
+	
+	<script type="text/javascript" src="ckplayer/ckplayer.js" charset="utf-8"></script>
+</html>
